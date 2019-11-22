@@ -1,5 +1,7 @@
 package com.example.android.project6;
 
+
+import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         Button yellow = findViewById(R.id.yellow);
         Button blue = findViewById(R.id.blue);
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "1543Humane_jenson_bold.TTF");
-        red.setTypeface(font);
+        Context context = this;
+        MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.sound);
+        mediaPlayer.start();
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -37,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                startGame();
+
             }
         });
     }
 
-    public void StartGame(){
+    public void startGame(){
         Button red = findViewById(R.id.red);
         Button green = findViewById(R.id.green);
         Button yellow = findViewById(R.id.yellow);
