@@ -4,23 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#dfaeff"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay" />
 
-        <TextView
-            android:id="@+id/textView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20sp">
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Simon"
-            android:textSize="40sp" />
+            android:layout_height="match_parent">
 
-    </com.google.android.material.appbar.AppBarLayout>
+        </FrameLayout>
 
-    <include layout="@layout/content_main" />
+        <include
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -28,10 +38,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_vertical"
         android:layout_margin="@dimen/fab_margin"
-        android:scaleX="3"
-        android:scaleY="3"
+        android:scaleX="4"
+        android:scaleY="4"
+        android:text="Hello"
+        app:backgroundTint="#dfaeff"
         app:fabSize="auto"
         app:hoveredFocusedTranslationZ="30dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/star_big_on" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -20,21 +20,32 @@
 
             <Button
                 android:id="@+id/red"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#FF0000"
-                android:padding="100sp"
-                android:text="Button" />
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/baumans"
+                android:paddingTop="100sp"
+                android:paddingBottom="100sp"
+                android:text="SIMONE"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textColor="#dfaeff"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/green"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#2E7D32"
-                android:padding="100sp"
-                android:text="Button" />
+                android:background="@drawable/yellowbutton"
+                android:fontFamily="@font/baumans"
+                android:paddingTop="150sp"
+                android:paddingBottom="150sp"
+                android:text="The Music Memory Game"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,22 +55,32 @@
 
             <Button
                 android:id="@+id/blue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#1565C0"
-                android:padding="100sp"
-                android:text="Button" />
+                android:background="@drawable/blubutton"
+                android:fontFamily="@font/baumans"
+                android:paddingTop="140sp"
+                android:paddingBottom="150sp"
+                android:text="High Scores"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/yellow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#F9DD25"
-                android:padding="100sp"
-                android:text="Button" />
+                android:background="@drawable/pinkbutton"
+                android:fontFamily="@font/baumans"
+                android:paddingTop="120sp"
+                android:paddingBottom="150sp"
+                android:text="Themes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

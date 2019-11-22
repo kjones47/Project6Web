@@ -1,5 +1,6 @@
 package com.example.android.project6;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,13 +20,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = findViewById(R.id.toolbar);
+      //  setSupportActionBar(toolbar);
 
         Button red = findViewById(R.id.red);
         Button green = findViewById(R.id.green);
         Button yellow = findViewById(R.id.yellow);
         Button blue = findViewById(R.id.blue);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "1543Humane_jenson_bold.TTF");
+        red.setTypeface(font);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void StartGame(){
+        Button red = findViewById(R.id.red);
+        Button green = findViewById(R.id.green);
+        Button yellow = findViewById(R.id.yellow);
+        Button blue = findViewById(R.id.blue);
+        red.setText("");
+        green.setText("");
+        yellow.setText("");
+        blue.setText("");
     }
 
     @Override
